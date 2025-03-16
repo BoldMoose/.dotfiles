@@ -9,9 +9,10 @@ Checkout the new dir, specifying the working tree a `~/`:
 ```
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME checkout
 ```
-Set local config to not show untracked files:
+Set local config to not show untracked files by editing ~/.dotfiles/config to add the following:
 ```
-git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
+[status]
+	showUntrackedFiles = no
 ```
 
 # Making changes
