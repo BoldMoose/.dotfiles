@@ -1,3 +1,5 @@
+# More Information
+Based on [Best way to manage your dotfiles](https://medium.com/@simontoth/best-way-to-manage-your-dotfiles-2c45bb280049)
 # Setup a New Machine
 First, create a `git` alias to use with the new repo:
 ```
