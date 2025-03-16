@@ -2,7 +2,7 @@
 Install [GNU Stow](https://www.gnu.org/software/stow/)
 Clone the repo:
 ```
-git clone git@github.com:BoldMoose/dotfiles.git $HOME/.dotfiles
+cd ~ && git clone git@github.com:BoldMoose/dotfiles.git
 ```
 Install packages:
 ```
