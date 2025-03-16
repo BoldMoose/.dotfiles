@@ -12,4 +12,3 @@ fi
 export PATH
 
 # User specific aliases and functions
-. "$HOME/.cargo/env"
