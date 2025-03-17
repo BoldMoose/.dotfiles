@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e # exit on first error
+
+CONFIG="install.yaml"
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTBOT_BIN="${HERE}/dotbot/bin/dotbot"
+
+function submodule_update {
+  git submodule sync --recursive
+  git submodule update --init --recursive
+}
+
+# Update submodules
+cd "${HERE}"
+submodule_update
+
+# Install dotfiles
+"${DOTBOT_BIN}" -d "${HERE}" -c "${CONFIG}" "${@}"

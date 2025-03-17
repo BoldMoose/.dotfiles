@@ -1,10 +1,9 @@
 # Setup a New Machine
-Install [GNU Stow](https://www.gnu.org/software/stow/)
 Clone the repo:
 ```
 cd ~ && git clone git@github.com:BoldMoose/.dotfiles.git
 ```
-Install packages:
+Run the install script:
 ```
-cd ~/.dotfiles && stow bash -t ~
+./.dotfiles/install
 ```
