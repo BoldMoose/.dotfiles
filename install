@@ -6,17 +6,10 @@ CONFIG="install.yaml"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DOTBOT_BIN="${HERE}/dotbot/bin/dotbot"
 
-function submodule_update {
-  cd "${HERE}"
-  git submodule sync --recursive
-  git submodule update --init --recursive
-}
-
-function install {
-  "${DOTBOT_BIN}" -d "${HERE}" -c "${CONFIG}" "${@}"
-}
-
 # Update submodules
-submodule_update
+cd "${HERE}"
+git submodule sync --recursive
+git submodule update --init --recursive
+
 # Install dotfiles
-install
+"${DOTBOT_BIN}" -d "${HERE}" -c "${CONFIG}" "${@}"
